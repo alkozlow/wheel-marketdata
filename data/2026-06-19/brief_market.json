@@ -1,8 +1,8 @@
 {
   "as_of": "2026-06-19",
-  "fetch_time": "13:54",
+  "fetch_time": "20:46",
   "gate0": {
-    "timestamp": "2026-06-20T13:54:17",
+    "timestamp": "2026-06-20T20:46:08",
     "posture": "SELECTIVE",
     "score": 6.5,
     "max_score": 9.0,
@@ -61,7 +61,7 @@
       },
       {
         "name": "G0-8 SPY RSI wkly",
-        "value": "55.14516669767065",
+        "value": "55.14516679729481",
         "score": 1.0,
         "signal": "\u2705 PASS"
       },
@@ -1557,8 +1557,8 @@
       "div_timing_safe": true,
       "is_legacy": false,
       "is_frozen": false,
-      "eps": 11.83,
-      "pe": 18.78,
+      "eps": 11.82,
+      "pe": 18.8,
       "payout_ratio": 0.4057,
       "debt_equity": 0.0
     },
