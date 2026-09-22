@@ -1,0 +1,81 @@
+{
+ "as_of": "2026-09-22",
+ "fetch_time": "21:10",
+ "doctrine": "v9.9.1",
+ "exp_date": "2026-10-30",
+ "dte": 38,
+ "nlv_assumed": 40000.0,
+ "expiry_note": "weekly_series_no_monthly_in_window",
+ "gate0": {
+  "posture": "SELECTIVE",
+  "score": 5.5,
+  "vix": 14.21,
+  "vix3m": 17.63,
+  "spy": 774.01,
+  "failing": [
+   "G0-3 % > 50D MA",
+   "G0-4 % > 20D MA",
+   "G0-8 SPY RSI wkly",
+   "G0-9 1M new highs"
+  ]
+ },
+ "zone_counts": {
+  "A": 16,
+  "B": 17,
+  "C": 0,
+  "GOLD": 1,
+  "IBIT": 1
+ },
+ "actionable": [],
+ "near_miss": [
+  {
+   "sym": "IBIT",
+   "zone": "IBIT",
+   "strike": 47.0,
+   "blocked_by": "LOW_OI(130)",
+   "ann_yield": 30.04
+  }
+ ],
+ "rejected": {
+  "AWK": "VOL_RANK_PROXY(14.9<=30) | RATE_GATE(beta_rate=1.278>0.50)",
+  "BMY": "EXDIV_INSIDE_TENOR | VOL_RANK_PROXY(6.3<=30)",
+  "CSCO": "EXDIV_INSIDE_TENOR | VOL_AT_FILL(IV/HV30=0.816<0.95)",
+  "CVX": "CONCENTRATION(46.2%>20%) | LOW_OI(24)",
+  "D": "VOL_RANK_PROXY(1.8<=30) | RATE_GATE(beta_rate=1.082>0.50)",
+  "DUK": "FILTER_SCORE(2/4<3) | VOL_RANK_PROXY(11.7<=30)",
+  "EXC": "FILTER_SCORE(2/4<3) | VOL_RANK_PROXY(6.8<=30)",
+  "IAU": "FILTER_SCORE(2/4<3) | CONCENTRATION(20.1%>20%)",
+  "IBM": "FILTER_SCORE(2/4<3) | CONCENTRATION(51.2%>20%)",
+  "JNJ": "CONCENTRATION(62.5%>20%) | LOW_OI(55)",
+  "KMB": "FROZEN_NO_NEW_CSP",
+  "KO": "VOL_RANK_PROXY(18.0<=30) | CONCENTRATION(21.0%>20%)",
+  "KVUE": "FROZEN_NO_NEW_CSP",
+  "LOW": "EXDIV_INSIDE_TENOR | FILTER_SCORE(2/4<3)",
+  "MAIN": "EXDIV_INSIDE_TENOR | VOL_RANK_PROXY(0.5<=30)",
+  "MCD": "FILTER_SCORE(2/4<3) | CONCENTRATION(58.8%>20%)",
+  "MMM": "VOL_RANK_PROXY(5.9<=30) | CONCENTRATION(37.5%>20%)",
+  "MO": "VOL_RANK_PROXY(29.3<=30) | LOW_OI(28)",
+  "NEE": "FILTER_SCORE(1/4<3) | VOL_RANK_PROXY(6.3<=30)",
+  "O": "PERMANENTLY_EXCLUDED",
+  "OHI": "PERMANENTLY_EXCLUDED",
+  "OKE": "VOL_RANK_PROXY(16.7<=30) | CONCENTRATION(21.2%>20%)",
+  "OXY": "PERMANENTLY_EXCLUDED",
+  "PFE": "EXDIV_INSIDE_TENOR | VOL_RANK_PROXY(28.4<=30)",
+  "PM": "EXDIV_INSIDE_TENOR | VOL_RANK_PROXY(5.9<=30)",
+  "SCHD": "VOL_RANK_PROXY(18.5<=30) | LOW_OI(147)",
+  "SO": "FILTER_SCORE(1/4<3) | VOL_RANK_PROXY(4.1<=30)",
+  "SWK": "VOL_RANK_PROXY(2.3<=30) | CONCENTRATION(20.6%>20%)",
+  "T": "PERMANENTLY_EXCLUDED",
+  "TGT": "CONCENTRATION(36.5%>20%) | LOW_OI(5)",
+  "USB": "EXDIV_INSIDE_TENOR | LOW_OI(2)",
+  "VZ": "EXDIV_INSIDE_TENOR | LOW_OI(318)",
+  "WMB": "LOW_OI(11) | LOW_VOLUME(2)",
+  "XOM": "PERMANENTLY_EXCLUDED"
+ },
+ "reader_notes": [
+  "bid/ann_yield are yfinance screening quotes, ~15 min delayed. Confirm on IBKR before any ticket.",
+  "vol_rank_proxy is an HV30 percentile, NOT the 52-week IV Rank the doctrine specifies. No IV history is available from either feed.",
+  "PROVISIONAL_PASS = every doctrine test in this file passed; the items in confirm_on_ibkr still have to be checked live.",
+  "Full inputs remain in brief_market.json / scan.json if a number here needs auditing."
+ ]
+}
