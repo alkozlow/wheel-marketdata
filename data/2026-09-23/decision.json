@@ -1,0 +1,207 @@
+{
+ "as_of": "2026-09-23",
+ "fetch_time": "21:43",
+ "doctrine": "v9.9.1 + v9.10 sleeve",
+ "exp_date": "2026-10-30",
+ "dte": 37,
+ "nlv_assumed": 40000.0,
+ "expiry_note": "weekly_series_no_monthly_in_window",
+ "gate0": {
+  "posture": "SELECTIVE",
+  "score": 6.0,
+  "vix": 15.16,
+  "vix3m": 18.11,
+  "spy": 767.93,
+  "failing": [
+   "G0-3 % > 50D MA",
+   "G0-4 % > 20D MA",
+   "G0-9 1M new highs"
+  ]
+ },
+ "zone_counts": {
+  "A": 18,
+  "B": 15,
+  "C": 0,
+  "GOLD": 1,
+  "IBIT": 1,
+  "LEV": 2
+ },
+ "high_vol_sleeve": {
+  "IBIT": {
+   "px": 47.835,
+   "verdict": "REJECT",
+   "blocked_by": [
+    "LOW_OI(317)"
+   ],
+   "flags": [],
+   "pct_b": 0.91,
+   "band_zone": null,
+   "strike": 46.0,
+   "otm_pct": 3.8,
+   "delta": -0.3336,
+   "credit": 141.0,
+   "ann_yield": 30.24,
+   "pct_nlv": 11.5,
+   "iv_feed": 0.3696,
+   "hv30": 0.4926,
+   "iv_over_hv30": 0.75,
+   "trend_gate": null,
+   "own_trend": {
+    "sma50": 40.47,
+    "sma100": 39.83,
+    "bull": true
+   },
+   "off_1y_high_pct": -32.9,
+   "ret_1m_pct": 7.2,
+   "confirm_on_ibkr": [
+    "quote_warnings_present:LOW_OI",
+    "depth_bidsize_x_asksize_not_in_feed"
+   ]
+  },
+  "SOXL": {
+   "px": 145.751,
+   "verdict": "REJECT",
+   "blocked_by": [
+    "CONCENTRATION(23.8%>20%)"
+   ],
+   "flags": [],
+   "pct_b": 0.9882,
+   "band_zone": "C",
+   "strike": 95.0,
+   "otm_pct": 34.8,
+   "delta": -0.0944,
+   "credit": 370.0,
+   "ann_yield": 38.42,
+   "pct_nlv": 23.8,
+   "iv_feed": 1.2083,
+   "hv30": 1.179,
+   "iv_over_hv30": 1.025,
+   "trend_gate": {
+    "ref": "NVDA",
+    "close": 225.39,
+    "sma50": 215.19,
+    "sma100": 212.08,
+    "bull": true
+   },
+   "own_trend": {
+    "sma50": 126.99,
+    "sma100": 165.53,
+    "bull": false
+   },
+   "off_1y_high_pct": -51.5,
+   "ret_1m_pct": 31.2,
+   "confirm_on_ibkr": [
+    "delta_at_skewed_put_IV_confirm_on_IBKR",
+    "IV_and_HV30_must_be_reconfirmed_on_IBKR",
+    "depth_bidsize_x_asksize_not_in_feed"
+   ]
+  },
+  "TQQQ": {
+   "px": 78.4801,
+   "verdict": "REJECT",
+   "blocked_by": [
+    "TREND_GATE(QQQ close 741.01 / SMA50 710.72 / SMA100 713.32)"
+   ],
+   "flags": [],
+   "pct_b": 0.9643,
+   "band_zone": "C",
+   "strike": 60.0,
+   "otm_pct": 23.5,
+   "delta": -0.0941,
+   "credit": 101.0,
+   "ann_yield": 16.61,
+   "pct_nlv": 15.0,
+   "iv_feed": 0.5646,
+   "hv30": 0.4646,
+   "iv_over_hv30": 1.215,
+   "trend_gate": {
+    "ref": "QQQ",
+    "close": 741.01,
+    "sma50": 710.72,
+    "sma100": 713.32,
+    "bull": false
+   },
+   "own_trend": {
+    "sma50": 70.89,
+    "sma100": 73.73,
+    "bull": false
+   },
+   "off_1y_high_pct": -9.8,
+   "ret_1m_pct": 13.7,
+   "confirm_on_ibkr": [
+    "delta_at_skewed_put_IV_confirm_on_IBKR",
+    "IV_and_HV30_must_be_reconfirmed_on_IBKR",
+    "depth_bidsize_x_asksize_not_in_feed"
+   ]
+  },
+  "nvda_earnings": {
+   "date": "2026-11-17",
+   "blackout": false
+  },
+  "backtest_ref": {
+   "SOXL_10d_NVDA_gate": "assigned 6%/cycle (~0.3/yr); net +12%/yr on collateral (+5% stress); worst cycle -35% (Jul 2024, gate was ON); max DD -35..-40%",
+   "TQQQ_15d_QQQ_gate": "assigned 9%/cycle; net +13%/yr (+7% stress); worst cycle -18%; max DD -18..-20%",
+   "co_assignment": "81% of SOXL assignment cycles were also TQQQ assignment cycles (weekly corr 0.86)"
+  }
+ },
+ "actionable": [],
+ "near_miss": [
+  {
+   "sym": "IBIT",
+   "zone": "IBIT",
+   "strike": 46.0,
+   "blocked_by": "LOW_OI(317)",
+   "ann_yield": 30.24
+  },
+  {
+   "sym": "TQQQ",
+   "zone": "LEV",
+   "strike": 60.0,
+   "blocked_by": "TREND_GATE(QQQ close 741.01 / SMA50 710.72 / SMA100 713.32)",
+   "ann_yield": 16.61
+  }
+ ],
+ "rejected": {
+  "AWK": "VOL_RANK_PROXY(14.9<=30) | RATE_GATE(beta_rate=0.745>0.50)",
+  "BMY": "EXDIV_INSIDE_TENOR | VOL_RANK_PROXY(9.0<=30)",
+  "CSCO": "EXDIV_INSIDE_TENOR | VOL_AT_FILL(IV/HV30=0.824<0.95)",
+  "CVX": "CONCENTRATION(47.5%>20%) | LOW_OI(295)",
+  "D": "FILTER_SCORE(2/4<3) | VOL_RANK_PROXY(19.5<=30)",
+  "DUK": "FILTER_SCORE(1/4<3) | RATE_GATE(beta_rate=0.69>0.50)",
+  "EXC": "FILTER_SCORE(1/4<3) | VOL_RANK_PROXY(23.5<=30)",
+  "IAU": "FILTER_SCORE(2/4<3) | LOW_OI(3)",
+  "IBM": "FILTER_SCORE(2/4<3) | CONCENTRATION(51.2%>20%)",
+  "JNJ": "CONCENTRATION(62.5%>20%) | LOW_OI(74)",
+  "KMB": "FROZEN_NO_NEW_CSP",
+  "KO": "VOL_RANK_PROXY(11.8<=30) | CONCENTRATION(20.8%>20%)",
+  "KVUE": "FROZEN_NO_NEW_CSP",
+  "LOW": "EXDIV_INSIDE_TENOR | FILTER_SCORE(2/4<3)",
+  "MAIN": "EXDIV_INSIDE_TENOR | VOL_RANK_PROXY(0.9<=30)",
+  "MCD": "FILTER_SCORE(1/4<3) | VOL_AT_FILL(IV/HV30=0.876<0.95)",
+  "MMM": "VOL_RANK_PROXY(14.9<=30) | CONCENTRATION(38.8%>20%)",
+  "MO": "VOL_RANK_PROXY(29.4<=30) | LOW_OI(30)",
+  "NEE": "FILTER_SCORE(1/4<3) | VOL_RANK_PROXY(16.7<=30)",
+  "O": "PERMANENTLY_EXCLUDED",
+  "OHI": "PERMANENTLY_EXCLUDED",
+  "OKE": "VOL_RANK_PROXY(16.3<=30) | CONCENTRATION(21.2%>20%)",
+  "OXY": "PERMANENTLY_EXCLUDED",
+  "PFE": "EXDIV_INSIDE_TENOR | CREDIT_BELOW_MIN($14<$25)",
+  "PM": "EXDIV_INSIDE_TENOR | VOL_RANK_PROXY(4.5<=30)",
+  "SCHD": "CREDIT_BELOW_MIN($15<$25) | LOW_OI(104)",
+  "SO": "FILTER_SCORE(1/4<3) | VOL_RANK_PROXY(28.5<=30)",
+  "SOXL": "CONCENTRATION(23.8%>20%)",
+  "SWK": "VOL_RANK_PROXY(2.3<=30) | CONCENTRATION(20.6%>20%)",
+  "T": "PERMANENTLY_EXCLUDED",
+  "TGT": "CONCENTRATION(36.2%>20%) | LOW_OI(23)",
+  "USB": "EXDIV_INSIDE_TENOR | RATE_GATE(beta_rate=0.746>0.50)",
+  "VZ": "EXDIV_INSIDE_TENOR | LOW_OI(235)",
+  "WMB": "LOW_VOLUME(2) | WIDE_SPREAD(20.0%)",
+  "XOM": "PERMANENTLY_EXCLUDED"
+ },
+ "reader_notes": [
+  "bid/ann_yield are yfinance screening quotes, ~15 min delayed. Confirm on IBKR before any ticket.",
+  "vol_rank_proxy is an HV30 percentile, NOT the 52-week IV Rank the doctrine specifies. No IV history is available from either feed.",
+  "PROVISIONAL_PASS = every doctrine test in this file passed; the items in confirm_on_ibkr still have to be checked live.",
+  "Full inputs remain in brief_market.json / scan.json if a number here needs auditing."
+ ]
+}
