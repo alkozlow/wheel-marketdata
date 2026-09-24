@@ -1,0 +1,73 @@
+{
+  "timestamp": "2026-09-24T16:43:22",
+  "posture": "SELECTIVE",
+  "score": 5.5,
+  "max_score": 9.0,
+  "vix": 15.62,
+  "vix3m": 18.35,
+  "spy": 765.8,
+  "spy_vs_20d": 0.26,
+  "spy_vs_50d": 0.84,
+  "spy_vs_200d": 7.2,
+  "spy_rsi": 52.4,
+  "pct_above_50d": 31.0,
+  "pct_above_20d": 27.6,
+  "n_highs": 1,
+  "indicators": [
+    {
+      "name": "G0-1 VIX",
+      "value": "15.619999885559082",
+      "score": 1.0,
+      "signal": "\u2705 PASS"
+    },
+    {
+      "name": "G0-2 Term structure",
+      "value": "18.35 vs 15.62",
+      "score": 1.0,
+      "signal": "\u2705 PASS"
+    },
+    {
+      "name": "G0-3 % > 50D MA",
+      "value": "31.0%",
+      "score": 0.0,
+      "signal": "\u274c FAIL"
+    },
+    {
+      "name": "G0-4 % > 20D MA",
+      "value": "27.6%",
+      "score": 0.0,
+      "signal": "\u274c FAIL"
+    },
+    {
+      "name": "G0-5 SPY vs 20D",
+      "value": "+0.3%",
+      "score": 0.5,
+      "signal": "\ud83d\udfe1 CAUTION"
+    },
+    {
+      "name": "G0-6 SPY vs 50D",
+      "value": "+0.8%",
+      "score": 1.0,
+      "signal": "\u2705 PASS"
+    },
+    {
+      "name": "G0-7 SPY vs 200D",
+      "value": "+7.2%",
+      "score": 1.0,
+      "signal": "\u2705 PASS"
+    },
+    {
+      "name": "G0-8 SPY RSI wkly",
+      "value": "52.44797282657049",
+      "score": 1.0,
+      "signal": "\u2705 PASS"
+    },
+    {
+      "name": "G0-9 1M new highs",
+      "value": "1/20",
+      "score": 0.0,
+      "signal": "\u274c FAIL"
+    }
+  ],
+  "action": "1\u20132 CSPs, Tier 1 only (\u22654/5 filters, 20\u201330\u0394)"
+}
