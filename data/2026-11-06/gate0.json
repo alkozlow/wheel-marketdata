@@ -1,28 +1,28 @@
 {
-  "timestamp": "2026-11-06T15:01:22",
+  "timestamp": "2026-11-06T18:19:30",
   "posture": "DEFENSIVE",
-  "score": 3.5,
+  "score": 4.5,
   "max_score": 9.0,
-  "vix": 26.77,
-  "vix3m": 25.55,
-  "spy": 733.0,
-  "spy_vs_20d": -4.25,
-  "spy_vs_50d": -4.29,
-  "spy_vs_200d": 0.77,
-  "spy_rsi": 33.6,
+  "vix": 24.29,
+  "vix3m": 23.55,
+  "spy": 739.41,
+  "spy_vs_20d": -3.16,
+  "spy_vs_50d": -3.37,
+  "spy_vs_200d": 1.61,
+  "spy_rsi": 37.9,
   "pct_above_50d": 66.0,
-  "pct_above_20d": 66.0,
-  "n_highs": 17,
+  "pct_above_20d": 63.0,
+  "n_highs": 15,
   "indicators": [
     {
       "name": "G0-1 VIX",
-      "value": "26.770000457763672",
+      "value": "24.290000915527344",
       "score": 0.0,
       "signal": "\u274c FAIL"
     },
     {
       "name": "G0-2 Term structure",
-      "value": "25.55 vs 26.77",
+      "value": "23.55 vs 24.29",
       "score": 0.0,
       "signal": "\u274c FAIL"
     },
@@ -34,37 +34,37 @@
     },
     {
       "name": "G0-4 % > 20D MA",
-      "value": "66.0%",
+      "value": "63.0%",
       "score": 1.0,
       "signal": "\u2705 PASS"
     },
     {
       "name": "G0-5 SPY vs 20D",
-      "value": "-4.2%",
+      "value": "-3.2%",
       "score": 0.0,
       "signal": "\u274c FAIL"
     },
     {
       "name": "G0-6 SPY vs 50D",
-      "value": "-4.3%",
+      "value": "-3.4%",
       "score": 0.0,
       "signal": "\u274c FAIL"
     },
     {
       "name": "G0-7 SPY vs 200D",
-      "value": "+0.8%",
+      "value": "+1.6%",
+      "score": 1.0,
+      "signal": "\u2705 PASS"
+    },
+    {
+      "name": "G0-8 SPY RSI wkly",
+      "value": "37.88417961305432",
       "score": 0.5,
       "signal": "\ud83d\udfe1 CAUTION"
     },
     {
-      "name": "G0-8 SPY RSI wkly",
-      "value": "33.579349589428645",
-      "score": 0.0,
-      "signal": "\u274c FAIL"
-    },
-    {
       "name": "G0-9 1M new highs",
-      "value": "17/20",
+      "value": "15/20",
       "score": 1.0,
       "signal": "\u2705 PASS"
     }
