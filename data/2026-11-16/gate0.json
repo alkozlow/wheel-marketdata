@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-11-16T20:16:44",
+  "posture": "DEFENSIVE",
+  "score": 4.5,
+  "max_score": 9.0,
+  "vix": 22.96,
+  "vix3m": 22.86,
+  "spy": 740.56,
+  "spy_vs_20d": -2.27,
+  "spy_vs_50d": -3.01,
+  "spy_vs_200d": 1.5,
+  "spy_rsi": 48.0,
+  "spy_rsi_basis": "weekly",
+  "spy_rsi_daily": 40.7,
+  "pct_above_50d": 74.0,
+  "pct_above_20d": 55.0,
+  "n_highs": 5,
+  "indicators": [
+    {
+      "name": "G0-1 VIX",
+      "value": "22.959999084472656",
+      "score": 0.0,
+      "signal": "\u274c FAIL"
+    },
+    {
+      "name": "G0-2 Term structure",
+      "value": "22.86 vs 22.96",
+      "score": 0.5,
+      "signal": "\ud83d\udfe1 CAUTION"
+    },
+    {
+      "name": "G0-3 % > 50D MA",
+      "value": "74.0%",
+      "score": 1.0,
+      "signal": "\u2705 PASS"
+    },
+    {
+      "name": "G0-4 % > 20D MA",
+      "value": "55.0%",
+      "score": 1.0,
+      "signal": "\u2705 PASS"
+    },
+    {
+      "name": "G0-5 SPY vs 20D",
+      "value": "-2.3%",
+      "score": 0.0,
+      "signal": "\u274c FAIL"
+    },
+    {
+      "name": "G0-6 SPY vs 50D",
+      "value": "-3.0%",
+      "score": 0.0,
+      "signal": "\u274c FAIL"
+    },
+    {
+      "name": "G0-7 SPY vs 200D",
+      "value": "+1.5%",
+      "score": 1.0,
+      "signal": "\u2705 PASS"
+    },
+    {
+      "name": "G0-8 SPY RSI wkly",
+      "value": "48.00428082574484",
+      "score": 1.0,
+      "signal": "\u2705 PASS"
+    },
+    {
+      "name": "G0-9 1M new highs",
+      "value": "5/20",
+      "score": 0.0,
+      "signal": "\u274c FAIL"
+    }
+  ],
+  "action": "Up to 2 names; Zone A and the sleeve prohibited; only Zone C (\u22654/9) remains"
+}
