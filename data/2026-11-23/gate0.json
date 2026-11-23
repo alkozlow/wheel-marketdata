@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-11-23T21:27:16",
+  "posture": "NO_TRADE",
+  "score": 2.0,
+  "max_score": 9.0,
+  "vix": 27.49,
+  "vix3m": 25.9,
+  "spy": 724.48,
+  "spy_vs_20d": -2.85,
+  "spy_vs_50d": -4.59,
+  "spy_vs_200d": -0.82,
+  "spy_rsi": 45.8,
+  "spy_rsi_basis": "weekly",
+  "spy_rsi_daily": 42.4,
+  "pct_above_50d": 53.0,
+  "pct_above_20d": 30.0,
+  "n_highs": 1,
+  "indicators": [
+    {
+      "name": "G0-1 VIX",
+      "value": "27.489999771118164",
+      "score": 0.0,
+      "signal": "\u274c FAIL"
+    },
+    {
+      "name": "G0-2 Term structure",
+      "value": "25.90 vs 27.49",
+      "score": 0.0,
+      "signal": "\u274c FAIL"
+    },
+    {
+      "name": "G0-3 % > 50D MA",
+      "value": "53.0%",
+      "score": 0.5,
+      "signal": "\ud83d\udfe1 CAUTION"
+    },
+    {
+      "name": "G0-4 % > 20D MA",
+      "value": "30.0%",
+      "score": 0.0,
+      "signal": "\u274c FAIL"
+    },
+    {
+      "name": "G0-5 SPY vs 20D",
+      "value": "-2.9%",
+      "score": 0.0,
+      "signal": "\u274c FAIL"
+    },
+    {
+      "name": "G0-6 SPY vs 50D",
+      "value": "-4.6%",
+      "score": 0.0,
+      "signal": "\u274c FAIL"
+    },
+    {
+      "name": "G0-7 SPY vs 200D",
+      "value": "-0.8%",
+      "score": 0.5,
+      "signal": "\ud83d\udfe1 CAUTION"
+    },
+    {
+      "name": "G0-8 SPY RSI wkly",
+      "value": "45.841133620820564",
+      "score": 1.0,
+      "signal": "\u2705 PASS"
+    },
+    {
+      "name": "G0-9 1M new highs",
+      "value": "1/20",
+      "score": 0.0,
+      "signal": "\u274c FAIL"
+    }
+  ],
+  "action": "Manage open positions only \u2014 no new puts"
+}

@@ -1,0 +1,390 @@
+{
+ "as_of": "2026-11-23",
+ "fetch_time": "21:30",
+ "fetch_time_et": "15:30 ET",
+ "quote_session": "RTH",
+ "doctrine": "v10.1 (zones v9.9.1 + sleeve v9.11 + 11 and 15 Nov 2026 amendments)",
+ "engine_build": "2026-11-15 v10.1 (step-1 fixes + owner decisions; test_step1_fixes.py, test_v10_1_decisions.py)",
+ "data_quality": {
+  "earnings_date_stale_or_unknown": [
+   "AWK",
+   "BMY",
+   "D",
+   "DUK",
+   "EXC",
+   "KHC",
+   "KO",
+   "LOW",
+   "MAIN",
+   "MCD",
+   "O",
+   "OKE",
+   "OXY",
+   "PM",
+   "SO",
+   "TGT",
+   "WMB"
+  ],
+  "gate0_rsi_basis": "weekly",
+  "holiday_calendar_ok": true
+ },
+ "exp_date": "2026-12-25",
+ "dte": 32,
+ "nlv_assumed": 40000.0,
+ "expiry_note": "weekly_series_no_monthly_in_window",
+ "gate0": {
+  "posture": "NO_TRADE",
+  "score": 2.0,
+  "vix": 27.49,
+  "vix3m": 25.9,
+  "spy": 724.48,
+  "failing": [
+   "G0-1 VIX",
+   "G0-2 Term structure",
+   "G0-3 % > 50D MA",
+   "G0-4 % > 20D MA",
+   "G0-5 SPY vs 20D",
+   "G0-6 SPY vs 50D",
+   "G0-7 SPY vs 200D",
+   "G0-9 1M new highs"
+  ]
+ },
+ "zone_counts": {
+  "A": 9,
+  "B": 22,
+  "C": 2,
+  "GOLD": 1,
+  "IBIT": 1,
+  "LEV": 2
+ },
+ "high_vol_sleeve": {
+  "IBIT": {
+   "px": 34.515,
+   "verdict": "REJECT",
+   "blocked_by": [
+    "FILTER_SCORE(1/4<3)"
+   ],
+   "flags": [],
+   "pct_b": 0.1184,
+   "band_zone": null,
+   "strike": 33.0,
+   "otm_pct": 4.4,
+   "structure": "csp",
+   "long_strike": null,
+   "width": null,
+   "max_loss_put_phase": null,
+   "delta": -0.347,
+   "credit": 129.0,
+   "ann_yield": 44.59,
+   "pct_nlv": 8.2,
+   "iv_feed": 0.5215,
+   "hv30": 0.4512,
+   "iv_over_hv30": 1.156,
+   "trend_gate": null,
+   "own_trend": {
+    "sma50": 44.37,
+    "sma100": 41.72,
+    "bull": false
+   },
+   "off_1y_high_pct": -37.7,
+   "ret_1m_pct": -24.9,
+   "confirm_on_ibkr": [
+    "IBIT_vol_gate_IVpct13w>50_AND_IV>=HV30_on_IBKR_(fail=1_contract_accumulation_bid)",
+    "quote_warnings_present:EXPIRY_MISMATCH",
+    "depth_bidsize_x_asksize_not_in_feed"
+   ]
+  },
+  "SOXL": {
+   "px": 43.3301,
+   "verdict": "REJECT",
+   "blocked_by": [
+    "NO_LONG_LEG_STRIKE_AT_OR_BELOW_20.28",
+    "TREND_GATE(NVDA close 166.13 / SMA50 206.1 / SMA100 209.39)",
+    "VOL_AT_FILL(IV/HV30=0.688<0.95)"
+   ],
+   "flags": [
+    "EXDIV_INSIDE_TENOR_IGNORED_LOW_YIELD",
+    "NVDA_EARNINGS_DATE_STALE",
+    "INFO_LOW_OI(323)",
+    "INFO_WIDE_SPREAD(18.8%)"
+   ],
+   "pct_b": 0.2671,
+   "band_zone": "B",
+   "strike": 28.0,
+   "otm_pct": 35.4,
+   "structure": "put_spread",
+   "long_strike": null,
+   "width": null,
+   "max_loss_put_phase": null,
+   "delta": -0.1429,
+   "credit": 265.0,
+   "ann_yield": 107.95,
+   "pct_nlv": 7.0,
+   "iv_feed": 1.8877,
+   "hv30": 2.7455,
+   "iv_over_hv30": 0.688,
+   "trend_gate": {
+    "ref": "NVDA",
+    "close": 166.13,
+    "sma50": 206.1,
+    "sma100": 209.39,
+    "bull": false
+   },
+   "own_trend": {
+    "sma50": 101.62,
+    "sma100": 118.07,
+    "bull": false
+   },
+   "off_1y_high_pct": -85.6,
+   "ret_1m_pct": -48.1,
+   "confirm_on_ibkr": [
+    "NVDA_earnings_date_not_in_feed_confirm_before_ticket",
+    "delta_at_skewed_put_IV_confirm_on_IBKR",
+    "IV_and_HV30_must_be_reconfirmed_on_IBKR",
+    "quote_warnings_present:EXPIRY_MISMATCH,WIDE_SPREAD,LOW_OI",
+    "depth_bidsize_x_asksize_not_in_feed"
+   ]
+  },
+  "TQQQ": {
+   "px": 49.56,
+   "verdict": "REJECT",
+   "blocked_by": [
+    "TREND_GATE(QQQ close 652.86 / SMA50 709.77 / SMA100 709.69)",
+    "VOL_AT_FILL(IV/HV30=0.773<0.95)"
+   ],
+   "flags": [
+    "EXDIV_INSIDE_TENOR_IGNORED_LOW_YIELD"
+   ],
+   "pct_b": 0.2423,
+   "band_zone": "B",
+   "strike": 35.0,
+   "otm_pct": 29.4,
+   "structure": "csp",
+   "long_strike": null,
+   "width": null,
+   "max_loss_put_phase": null,
+   "delta": -0.0843,
+   "credit": 125.0,
+   "ann_yield": 40.74,
+   "pct_nlv": 8.8,
+   "iv_feed": 0.9595,
+   "hv30": 1.2415,
+   "iv_over_hv30": 0.773,
+   "trend_gate": {
+    "ref": "QQQ",
+    "close": 652.86,
+    "sma50": 709.77,
+    "sma100": 709.69,
+    "bull": false
+   },
+   "own_trend": {
+    "sma50": 68.37,
+    "sma100": 69.6,
+    "bull": false
+   },
+   "off_1y_high_pct": -42.9,
+   "ret_1m_pct": -25.2,
+   "confirm_on_ibkr": [
+    "delta_at_skewed_put_IV_confirm_on_IBKR",
+    "IV_and_HV30_must_be_reconfirmed_on_IBKR",
+    "quote_warnings_present:EXPIRY_MISMATCH",
+    "depth_bidsize_x_asksize_not_in_feed"
+   ]
+  },
+  "nvda_earnings": {
+   "date": "2026-11-17",
+   "blackout": false,
+   "date_status": "stale"
+  },
+  "backtest_ref": {
+   "SOXL_15d5d_spread_NVDA_gate": "assigned 8%/cycle; +14%/yr full (+20% OOS 2020-26); worst position CVaR5 -34%; if assignments never recover +5%/yr (naked 10d: -1%)",
+   "TQQQ_10d_QQQ_gate_35DTE": "assigned 3%/cycle; worst position CVaR5 -22% (v9.10 %B map: -28%)",
+   "joint_stress_60k": "worst joint mark-to-market -$8.7k (-14.5% NLV); -$5.0k if nothing recovers"
+  }
+ },
+ "actionable": [],
+ "near_miss": [
+  {
+   "sym": "BMY",
+   "zone": "B",
+   "strike": 55.0,
+   "blocked_by": "POSTURE(2.0<5.0)",
+   "ann_yield": 12.65
+  },
+  {
+   "sym": "IAU",
+   "zone": "GOLD",
+   "strike": 67.0,
+   "blocked_by": "FILTER_SCORE(2/4<3)",
+   "ann_yield": 10.21
+  },
+  {
+   "sym": "IBIT",
+   "zone": "IBIT",
+   "strike": 33.0,
+   "blocked_by": "FILTER_SCORE(1/4<3)",
+   "ann_yield": 44.59
+  },
+  {
+   "sym": "MAIN",
+   "zone": "B",
+   "strike": 50.0,
+   "blocked_by": "POSTURE(2.0<5.0)",
+   "ann_yield": 82.13
+  },
+  {
+   "sym": "MO",
+   "zone": "A",
+   "strike": 70.0,
+   "blocked_by": "POSTURE(2.0<5.0)",
+   "ann_yield": 8.31
+  },
+  {
+   "sym": "OKE",
+   "zone": "A",
+   "strike": 80.0,
+   "blocked_by": "POSTURE(2.0<5.0)",
+   "ann_yield": 11.41
+  },
+  {
+   "sym": "SO",
+   "zone": "B",
+   "strike": null,
+   "blocked_by": "NO_LADDER_STRIKE_AT_OR_BELOW_83.83",
+   "ann_yield": null
+  },
+  {
+   "sym": "USB",
+   "zone": "A",
+   "strike": 55.0,
+   "blocked_by": "POSTURE(2.0<5.0)",
+   "ann_yield": 16.38
+  }
+ ],
+ "rejected": {
+  "D": "POSTURE(2.0<5.0) | CREDIT_BELOW_MIN($15<$25)",
+  "EXC": "POSTURE(2.0<5.0) | CREDIT_BELOW_MIN($20<$25)",
+  "KHC": "POSTURE(2.0<5.0) | CREDIT_BELOW_MIN($10<$25)",
+  "KMB": "FROZEN_NO_NEW_CSP",
+  "NEE": "FILTER_SCORE(2/4<3) | POSTURE(2.0<5.0)",
+  "O": "PERMANENTLY_EXCLUDED",
+  "OHI": "PERMANENTLY_EXCLUDED",
+  "OXY": "PERMANENTLY_EXCLUDED",
+  "PFE": "RATE_GATE(beta_rate=0.74>0.50) | POSTURE(2.0<5.0)",
+  "SCHD": "POSTURE(2.0<5.0) | NO_LIVE_BID",
+  "SOXL": "NO_LONG_LEG_STRIKE_AT_OR_BELOW_20.28 | TREND_GATE(NVDA close 166.13 / SMA50 206.1 / SMA100 209.39)",
+  "T": "PERMANENTLY_EXCLUDED",
+  "TQQQ": "TREND_GATE(QQQ close 652.86 / SMA50 709.77 / SMA100 709.69) | VOL_AT_FILL(IV/HV30=0.773<0.95)",
+  "VZ": "FILTER_SCORE(2/4<3) | POSTURE(2.0<5.0)",
+  "WMB": "FILTER_SCORE(2/4<3) | POSTURE(2.0<5.0)",
+  "XOM": "PERMANENTLY_EXCLUDED"
+ },
+ "above_size_cap": {
+  "AWK": {
+   "pct_nlv": 33.8,
+   "strike": 135.0,
+   "also": [
+    "POSTURE(2.0<5.0)"
+   ]
+  },
+  "CSCO": {
+   "pct_nlv": 21.8,
+   "strike": 87.0,
+   "also": [
+    "FILTER_SCORE(2/4<3)",
+    "POSTURE(2.0<5.0)"
+   ]
+  },
+  "CVX": {
+   "pct_nlv": 48.8,
+   "strike": 195.0,
+   "also": [
+    "POSTURE(2.0<5.0)"
+   ]
+  },
+  "DUK": {
+   "pct_nlv": 30.0,
+   "strike": 120.0,
+   "also": [
+    "POSTURE(2.0<5.0)"
+   ]
+  },
+  "IBM": {
+   "pct_nlv": 53.8,
+   "strike": 215.0,
+   "also": [
+    "POSTURE(2.0<5.0)"
+   ]
+  },
+  "JNJ": {
+   "pct_nlv": 62.5,
+   "strike": 250.0,
+   "also": [
+    "POSTURE(2.0<5.0)"
+   ]
+  },
+  "KO": {
+   "pct_nlv": 22.5,
+   "strike": 90.0,
+   "also": [
+    "POSTURE(2.0<5.0)"
+   ]
+  },
+  "LOW": {
+   "pct_nlv": 51.2,
+   "strike": 205.0,
+   "also": [
+    "POSTURE(2.0<5.0)"
+   ]
+  },
+  "MCD": {
+   "pct_nlv": 63.7,
+   "strike": 255.0,
+   "also": [
+    "FILTER_SCORE(2/4<3)",
+    "POSTURE(2.0<5.0)"
+   ]
+  },
+  "MMM": {
+   "pct_nlv": 42.5,
+   "strike": 170.0,
+   "also": [
+    "POSTURE(2.0<5.0)"
+   ]
+  },
+  "PM": {
+   "pct_nlv": 42.5,
+   "strike": 170.0,
+   "also": [
+    "RATE_GATE(beta_rate=0.502>0.50)",
+    "POSTURE(2.0<5.0)"
+   ]
+  },
+  "SWK": {
+   "pct_nlv": 24.4,
+   "strike": 97.5,
+   "also": [
+    "POSTURE(2.0<5.0)"
+   ]
+  },
+  "TGT": {
+   "pct_nlv": 37.5,
+   "strike": 150.0,
+   "also": [
+    "POSTURE(2.0<4.0)"
+   ]
+  }
+ },
+ "reader_notes": [
+  "bid/ann_yield are yfinance screening quotes, ~15 min delayed. Confirm on IBKR before any ticket.",
+  "vol_rank_proxy is an HV30 percentile, NOT the 52-week IV Rank the doctrine specifies. No IV history is available from either feed.",
+  "PROVISIONAL_PASS = every doctrine test in this file passed; the items in confirm_on_ibkr still have to be checked live.",
+  "Full inputs remain in brief_market.json / scan.json if a number here needs auditing.",
+  "v10.0: exp_date/dte at the top are the run DEFAULT. A ticker whose earnings fall inside it is moved to an earlier listed Friday (flag EXPIRY_MOVED_BEFORE_EARNINGS) - read exp/dte per row.",
+  "v10.0: EXDIV_INSIDE_TENOR, EARNINGS_INSIDE_TENOR and INFO_LOW_OI / INFO_LOW_VOLUME / INFO_WIDE_SPREAD are flags, not rejects. Liquidity is checked by the owner on IBKR before the ticket.",
+  "15 Nov 2026: EARNINGS_DATE_UNKNOWN / EARNINGS_ESTIMATED_* mean the feed has no usable next earnings date (see data_quality) - get the real date before a ticket. INFO_EARNINGS_DATE_STALE = stale, but the estimate is clear of the tenor. QUOTE_SUSPECT = the feed bid is far above the model price; the yield is not real until IBKR confirms it.",
+  "v10.1 (15 Nov 2026): above_size_cap = strike x 100 is over the per-ticker cap at nlv_assumed (20%; gold 40%; IBIT none). Recompute at the real NLV. INFO_VOL_RANK_PROXY in Zones B/C is information, not a reject (it still rejects in Zone A). ATR is the true-range ATR(14). alt_expiries lists other listed expiries (30-55 DTE) for when the default expiry week is taken.",
+  "15 Nov 2026: G0-8 is now the WEEKLY RSI the spec asks for (it was daily until 13 Nov) - gate0.spy_rsi_basis says which was used. Scores before this date are not like-for-like on that indicator.",
+  "quote_session != RTH: option quotes were taken after the close and are degraded. CREDIT_BELOW_MIN / WIDE_SPREAD / NO_LIVE_BID / yields are not reliable; zone, gate, blackout, ex-div and concentration verdicts are."
+ ]
+}
